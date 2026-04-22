@@ -209,11 +209,15 @@ code {
   font-weight: 800;
 }
 
-.eyebrow-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: currentColor;
+.eyebrow-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eyebrow-icon svg {
+  width: 1rem;
+  height: 1rem;
 }
 
 .hero-logo {
@@ -354,20 +358,7 @@ code {
 }
 
 .card-icon {
-  width: 2.6rem;
-  height: 2.6rem;
   margin-bottom: 0.75rem;
-  border-radius: 14px;
-  background: color-mix(in srgb, var(--accent-color, var(--primary)) 12%, white);
-}
-
-.card-icon svg,
-.lesson-icon svg,
-.mini-icon svg,
-.band-icon svg,
-.info-icon svg {
-  width: 1.25rem;
-  height: 1.25rem;
 }
 
 .feature-card h2,
@@ -506,11 +497,9 @@ code {
 }
 
 .mini-icon {
-  width: 2.3rem;
-  height: 2.3rem;
+  width: 2rem;
+  height: 2rem;
   margin-bottom: 0.7rem;
-  border-radius: 999px;
-  background: rgba(241, 149, 45, 0.12);
 }
 
 .mini-card strong {
@@ -529,11 +518,32 @@ code {
 }
 
 .lesson-icon {
+  margin-bottom: 0.9rem;
+}
+
+.card-icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.lesson-icon svg {
   width: 3rem;
   height: 3rem;
-  margin-bottom: 0.9rem;
-  border-radius: 16px;
-  background: color-mix(in srgb, var(--accent-color, var(--primary)) 14%, white);
+}
+
+.mini-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.band-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.info-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .lesson-card ul {
@@ -545,19 +555,24 @@ code {
 }
 
 .lesson-card li {
-  position: relative;
-  padding-left: 1.2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding-left: 0;
 }
 
-.lesson-card li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.62rem;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--accent-color, var(--primary));
+.list-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  color: var(--accent-color, var(--primary));
+  margin-top: 0.12rem;
+}
+
+.list-check svg {
+  width: 0.85rem;
+  height: 0.85rem;
 }
 
 .info-band {
@@ -595,9 +610,16 @@ code {
 }
 
 .rating {
+  display: flex;
+  gap: 0.2rem;
   margin: 0 0 0.8rem;
-  color: var(--primary);
-  font-weight: 800;
+  color: hsl(45 100% 60%);
+}
+
+.rating svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
 }
 
 .testimonial-card blockquote {
@@ -605,13 +627,32 @@ code {
 }
 
 .author {
-  margin: 1rem 0 0;
+  margin: 0;
   font-weight: 800;
 }
 
 .role {
   margin: 0.15rem 0 0;
   font-size: 0.95rem;
+}
+
+.testimonial-person {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.person-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 999px;
+  background: rgba(241, 149, 45, 0.12);
+  font-size: 1.1rem;
+  flex: 0 0 auto;
 }
 
 .gallery-grid {
