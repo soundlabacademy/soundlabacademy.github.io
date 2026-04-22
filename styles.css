@@ -585,11 +585,15 @@ code {
   flex: 0 0 auto;
   color: var(--accent-color, var(--primary));
   margin-top: 0.12rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent-color, var(--primary)) 16%, white);
 }
 
 .list-check svg {
-  width: 0.85rem;
-  height: 0.85rem;
+  width: 0.72rem;
+  height: 0.72rem;
 }
 
 .info-band {
@@ -601,6 +605,13 @@ code {
   border: 1px solid rgba(202, 188, 164, 0.42);
   border-radius: 28px;
   padding: 1.35rem;
+}
+
+.info-band-title {
+  grid-column: 1 / -1;
+  margin: 0 0 0.2rem;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 .info-band article {
@@ -641,6 +652,18 @@ code {
 
 .testimonial-card blockquote {
   margin: 0;
+  position: relative;
+  padding-left: 0.9rem;
+}
+
+.testimonial-card blockquote::before {
+  content: "\201C";
+  position: absolute;
+  left: 0;
+  top: -0.1rem;
+  color: rgba(241, 149, 45, 0.2);
+  font-size: 2.6rem;
+  line-height: 1;
 }
 
 .author {
@@ -679,6 +702,7 @@ code {
 .gallery-card {
   overflow: hidden;
   margin: 0;
+  position: relative;
 }
 
 .gallery-card img {
@@ -919,6 +943,12 @@ code {
 @media (max-width: 780px) {
   .menu-toggle {
     display: inline-flex;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    gap: 3px;
   }
 
   .site-nav {
@@ -952,25 +982,88 @@ code {
   }
 
   .hero {
-    padding-top: 1rem;
+    padding-top: 0.65rem;
   }
 }
 
 @media (max-width: 640px) {
   .container {
-    width: min(100% - 1.25rem, 1120px);
+    width: min(100% - 1rem, 1120px);
+  }
+
+  .site-header {
+    background: rgba(255, 252, 247, 0.96);
+  }
+
+  .header-inner {
+    min-height: 72px;
+  }
+
+  .brand {
+    gap: 0.65rem;
+  }
+
+  .brand img {
+    width: 38px;
+    height: 38px;
   }
 
   .brand span {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
+  }
+
+  .hero {
+    padding: 0.35rem 0 3.25rem;
+  }
+
+  .hero-inner {
+    gap: 1.25rem;
+  }
+
+  .eyebrow {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.82rem;
+  }
+
+  .hero-logo {
+    width: min(320px, 86vw);
+  }
+
+  .hero-copy,
+  .section-lead {
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  .section {
+    padding: 3.6rem 0;
+  }
+
+  .section-heading {
+    gap: 0.7rem;
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.95rem, 8vw, 2.55rem);
+  }
+
+  .two-column,
+  .contact-grid,
+  .footer-inner {
+    gap: 1.35rem;
   }
 
   .hero-grid,
-  .mini-grid,
   .field-row,
   .contact-details-grid,
   .info-band {
     grid-template-columns: 1fr;
+  }
+
+  .hero-grid {
+    gap: 0.9rem;
+    margin-top: 2rem;
   }
 
   .contact-brand-mark {
@@ -979,8 +1072,139 @@ code {
     padding-right: 0;
   }
 
+  .feature-card {
+    padding: 1rem;
+    border-radius: 16px;
+    box-shadow: 0 14px 34px rgba(41, 36, 28, 0.07);
+  }
+
+  .feature-card::before {
+    display: none;
+  }
+
+  .feature-card h2 {
+    font-size: 0.95rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .feature-card p {
+    font-size: 0.8rem;
+    line-height: 1.45;
+  }
+
+  .image-panel img {
+    aspect-ratio: 16 / 10;
+    object-position: center 20%;
+  }
+
+  .copy-stack {
+    gap: 0.85rem;
+  }
+
+  .mini-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem;
+  }
+
+  .mini-card {
+    padding: 1rem 0.95rem;
+  }
+
+  .mini-card strong {
+    font-size: 0.98rem;
+  }
+
+  .mini-card span {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .lesson-card,
+  .contact-card,
+  .testimonial-card {
+    padding: 1.2rem;
+  }
+
+  .lesson-icon {
+    color: var(--foreground);
+  }
+
+  .lesson-card .button-ghost {
+    width: 100%;
+    background: var(--accent-color, var(--primary));
+    border-color: var(--accent-color, var(--primary));
+    color: #fff;
+    box-shadow: none;
+  }
+
+  .lesson-card .button-ghost:hover,
+  .lesson-card .button-ghost:focus-visible {
+    background: var(--accent-color, var(--primary));
+    border-color: var(--accent-color, var(--primary));
+    color: #fff;
+    transform: none;
+  }
+
+  .info-band {
+    gap: 1rem;
+    padding: 1.55rem 1.1rem;
+    border-radius: 22px;
+  }
+
+  .info-band article {
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    justify-items: start;
+    text-align: left;
+    gap: 0.1rem 0.85rem;
+  }
+
+  .info-band article > .band-icon {
+    grid-row: span 2;
+    margin-bottom: 0;
+  }
+
+  .info-band-title {
+    margin-bottom: 0.45rem;
+    font-size: 1.15rem;
+  }
+
+  .testimonial-card blockquote {
+    padding-left: 0.75rem;
+  }
+
+  .gallery-grid {
+    gap: 1rem;
+  }
+
+  .gallery-card figcaption {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 1.05rem 0.9rem 0.85rem;
+    color: #fff;
+    background: linear-gradient(180deg, transparent, rgba(21, 23, 30, 0.72));
+  }
+
+  .contact-card {
+    padding: 1.35rem;
+  }
+
+  .contact-brand-card {
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    gap: 0;
+  }
+
+  .contact-brand-mark {
+    display: none;
+  }
+
   .detail-item {
-    padding: 0.9rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 14px 30px rgba(41, 36, 28, 0.06);
   }
 
   .hero-grid {
@@ -994,13 +1218,21 @@ code {
 
   .button {
     width: 100%;
+    min-height: 46px;
+    border-radius: 14px;
   }
 
-  .hero-actions .button {
-    width: auto;
+  .map-frame {
+    min-height: 250px;
+    border-radius: 18px;
+  }
+
+  .footer-inner {
+    justify-items: center;
+    text-align: center;
   }
 
   .footer-meta {
-    text-align: left;
+    text-align: center;
   }
 }
