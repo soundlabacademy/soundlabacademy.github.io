@@ -539,7 +539,7 @@
             <form id="contact-form" class="contact-form">
               <div class="field-row">
                 <label>
-                  <span>Name</span>
+                  <span>Name *</span>
                   <input id="name" name="name" type="text" placeholder="Your name">
                 </label>
                 <label>
@@ -549,12 +549,12 @@
               </div>
 
               <label>
-                <span>Email</span>
+                <span>Email *</span>
                 <input id="email" name="email" type="email" placeholder="your@email.com">
               </label>
 
               <label>
-                <span>Message</span>
+                <span>Message *</span>
                 <textarea
                   id="message"
                   name="message"
@@ -564,13 +564,13 @@
               </label>
 
               <div class="form-actions">
-                <button class="button button-primary" type="submit">
+                <button class="button button-primary" type="button" id="email-button">Send Message</button>
+                <button class="button button-secondary whatsapp-button" type="submit">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
                   </svg>
-                  <span>Open WhatsApp</span>
+                  <span>WhatsApp</span>
                 </button>
-                <button class="button button-secondary" type="button" id="email-button">Send Email</button>
               </div>
             </form>
           </div>
