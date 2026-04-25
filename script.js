@@ -4,7 +4,7 @@ const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
 const navLinks = document.querySelectorAll(".site-nav a");
 const contactForm = document.getElementById("contact-form");
-const emailButton = document.getElementById("email-button");
+const whatsappButton = document.getElementById("whatsapp-button");
 const year = document.getElementById("year");
 const revealItems = document.querySelectorAll(".reveal");
 
@@ -51,19 +51,14 @@ const buildMessage = () => {
   return lines.join("\n");
 };
 
-if (contactForm) {
-  contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
+if (whatsappButton) {
+  whatsappButton.addEventListener("click", () => {
+    if (contactForm && !contactForm.reportValidity()) {
+      return;
+    }
+
     const whatsappUrl = `https://wa.me/85295491119?text=${encodeURIComponent(buildMessage())}`;
     window.open(whatsappUrl, "_blank", "noopener");
-  });
-}
-
-if (emailButton) {
-  emailButton.addEventListener("click", () => {
-    const subject = encodeURIComponent("Music lessons inquiry");
-    const body = encodeURIComponent(buildMessage());
-    window.location.href = `mailto:soundlabacademyhk@gmail.com?subject=${subject}&body=${body}`;
   });
 }
 

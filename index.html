@@ -3,12 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SoundLab Academy Hong Kong</title>
+  <title>SoundLab Academy Hong Kong | Private Music Lessons</title>
   <meta
     name="description"
-    content="Private 1-on-1 music lessons for everyone in Hong Kong. Make Music, Make Memories."
+    content="Book private 1-on-1 drum, voice, piano, and guitar lessons for kids and teenagers at SoundLab Academy in Hong Kong."
   >
+  <meta name="keywords" content="SoundLab Academy, Hong Kong music lessons, drum lessons Hong Kong, piano lessons Hong Kong, guitar lessons Hong Kong, voice lessons Hong Kong, kids music lessons">
+  <meta name="author" content="SoundLab Academy">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#e38315">
+  <link rel="canonical" href="https://soundlabacademy.github.io/">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SoundLab Academy">
+  <meta property="og:title" content="SoundLab Academy Hong Kong | Private Music Lessons">
+  <meta property="og:description" content="Private 1-on-1 drum, voice, piano, and guitar lessons for kids and teenagers in Hong Kong.">
+  <meta property="og:url" content="https://soundlabacademy.github.io/">
+  <meta property="og:image" content="https://soundlabacademy.github.io/assets/logo.png">
+  <meta property="og:locale" content="en_HK">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="SoundLab Academy Hong Kong | Private Music Lessons">
+  <meta name="twitter:description" content="Book private drum, voice, piano, and guitar lessons for kids and teenagers in Hong Kong.">
+  <meta name="twitter:image" content="https://soundlabacademy.github.io/assets/logo.png">
   <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicSchool",
+      "name": "SoundLab Academy",
+      "url": "https://soundlabacademy.github.io/",
+      "logo": "https://soundlabacademy.github.io/assets/logo.png",
+      "image": "https://soundlabacademy.github.io/assets/logo.png",
+      "description": "Private 1-on-1 drum, voice, piano, and guitar lessons for kids and teenagers in Hong Kong.",
+      "telephone": "+85295491119",
+      "email": "soundlabacademyhk@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Southmark, Tower B, 5th Floor, Unit 519, 11 Yip Hing Street",
+        "addressLocality": "Hong Kong",
+        "addressCountry": "HK"
+      },
+      "openingHours": "Mo-Sa 11:00-20:00",
+      "areaServed": "Hong Kong"
+    }
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -538,21 +577,33 @@
         <div class="contact-grid">
           <div class="contact-card reveal">
             <h3>Send a Message</h3>
-            <form id="contact-form" class="contact-form">
+            <form
+              id="contact-form"
+              class="contact-form"
+              action="https://formsubmit.co/soundlabacademy.tech@gmail.com"
+              method="POST"
+            >
+              <input type="hidden" name="_subject" value="New SoundLab Academy website inquiry">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_next" value="https://soundlabacademy.github.io/#contact">
+              <label class="form-honeypot" aria-hidden="true">
+                <span>Leave this field empty</span>
+                <input type="text" name="_honey" tabindex="-1" autocomplete="off">
+              </label>
               <div class="field-row">
                 <label>
                   <span>Name *</span>
-                  <input id="name" name="name" type="text" placeholder="Your name">
+                  <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
                 </label>
                 <label>
                   <span>Phone</span>
-                  <input id="phone" name="phone" type="tel" placeholder="+852 XXXX XXXX">
+                  <input id="phone" name="phone" type="tel" placeholder="+852 XXXX XXXX" autocomplete="tel">
                 </label>
               </div>
 
               <label>
                 <span>Email *</span>
-                <input id="email" name="email" type="email" placeholder="your@email.com">
+                <input id="email" name="email" type="email" placeholder="your@email.com" autocomplete="email" required>
               </label>
 
               <label>
@@ -562,12 +613,13 @@
                   name="message"
                   rows="5"
                   placeholder="Tell us about your child's interests and goals..."
+                  required
                 ></textarea>
               </label>
 
               <div class="form-actions">
-                <button class="button button-primary" type="button" id="email-button">Send Message</button>
-                <button class="button button-secondary whatsapp-button" type="submit">
+                <button class="button button-primary" type="submit">Send Message</button>
+                <button class="button button-secondary whatsapp-button" type="button" id="whatsapp-button">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
                   </svg>

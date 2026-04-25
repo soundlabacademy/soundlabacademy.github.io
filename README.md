@@ -16,6 +16,16 @@ If you want different captions too, edit the three `<figcaption>` lines in `inde
 
 Open `index.html` directly in a browser, or serve the folder with any static server.
 
+## Contact form email
+
+GitHub Pages can only host static files, so it cannot send email by itself. The contact form uses FormSubmit:
+
+- Form endpoint: `https://formsubmit.co/soundlabacademy.tech@gmail.com`
+- First submission will send an activation email to `soundlabacademy.tech@gmail.com`.
+- Open that activation email and confirm it once. After that, website inquiries are forwarded to the inbox.
+
+The WhatsApp button stays client-side and opens a prefilled WhatsApp message.
+
 ## Publish to GitHub Pages
 
 1. Create a GitHub repository.

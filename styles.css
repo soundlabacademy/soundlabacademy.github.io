@@ -741,6 +741,14 @@ code {
   gap: 0.4rem;
 }
 
+.contact-form .form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .contact-form span {
   font-weight: 700;
   color: hsl(220 35% 20%);
