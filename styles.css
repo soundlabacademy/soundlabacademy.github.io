@@ -225,6 +225,13 @@ code {
   width: min(360px, 70vw);
 }
 
+.hero-title {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(2.1rem, 1.65rem + 2vw, 4rem);
+  line-height: 1.05;
+}
+
 .hero-copy,
 .section-lead {
   max-width: 720px;
