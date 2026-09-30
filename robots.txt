@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://soundlabacademy.github.io/sitemap.xml
