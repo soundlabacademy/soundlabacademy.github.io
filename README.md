@@ -46,7 +46,7 @@ The contact address shown to visitors is `soundlabacademyhk@gmail.com`. It can w
 
 ## Edit content
 
-- **Teachers:** Edit each teacher's profile content in `index.html`. All four profiles include their supplied photographs and biographies. Rommel uses `assets/teacher-rommel-updated.jpg`, with the full photo visible in his bio popup and his original biography retained. Jenice's Voice profile includes her approved biography and quote.
+- **Teachers:** Edit each teacher's profile content in `index.html`. All four profiles include their supplied photographs and biographies. Rommel uses `assets/teacher-rommel-updated.jpg`, with the full photo visible in his bio popup and his original biography retained. Jen's Voice profile includes her approved biography and quote.
 - **Programs:** Edit the seven program cards in `index.html`. Their SVG files are saved in `assets/icons/`.
 - **Gallery:** Edit the photo entries and captions in `index.html`. The four studio photos in `assets/gallery/` and four event photos in `assets/events/` use numbered filenames to preserve their supplied 01-04 order. Studio photos move right to left; event photos move left to right. Clicking a photo opens the larger viewer. Keyboard browsing and reduced motion preferences use static, scrollable strips.
 - **Instagram:** The footer links to [@soundlabacademyhk](https://www.instagram.com/soundlabacademyhk/). Edit the social link in `index.html`; its SVG icon is saved in `assets/icons/instagram.svg`.
