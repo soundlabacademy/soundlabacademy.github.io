@@ -51,4 +51,4 @@ The contact address shown to visitors is `soundlabacademyhk@gmail.com`. It can w
 - **Gallery:** Edit the photo entries and captions in `index.html`. The four studio photos in `assets/gallery/` and four event photos in `assets/events/` use numbered filenames to preserve their supplied 01-04 order. Studio photos move right to left; event photos move left to right. Clicking a photo opens the larger viewer. Keyboard browsing and reduced motion preferences use static, scrollable strips.
 - **Instagram:** The footer links to [@soundlabacademyhk](https://www.instagram.com/soundlabacademyhk/). Edit the social link in `index.html`; its SVG icon is saved in `assets/icons/instagram.svg`.
 
-Content still to confirm: the descriptions for Music Theory, Flute, and Saxophone, and an approved social sharing image.
+Content still to confirm: an approved social sharing image.
